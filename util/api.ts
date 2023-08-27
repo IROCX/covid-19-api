@@ -32,9 +32,6 @@ export const getTotalConfirmed = async (countryName?: string) => {
 
 export const getTotalRecovered = async (countryName?: string) => {
   const name = getCountryName(countryName);
-  // if (name === "US") {
-  //   return getRecoveredUS();
-  // }
   return extractSingleValue(
     await fetchFeatures(
       endpoints.casesCounty,
